@@ -24,6 +24,7 @@
                 <td><?= $user->surname ?></td>
                 <td><?= $user->email ?></td>
                 <td><?= $user->birthdate ?></td>
+                <td><a href="/user/show/<?=$user->id ?>"ver</a></td>
                 </tr>
             <?php } ?>            
         </tbody>

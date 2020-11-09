@@ -11,13 +11,14 @@ class User
         # code...
     }
 
-    public static function all()
+    public static function find($id)
     {
         $db = User::db();
-        $statement = $db->query('SELECT * FROM users');
-        $users = $statement->fetchAll(PDO::FETCH_CLASS, User::class);
-
-        return $users;        
+        $stmt = $db->prepare('SELECT * FROM users WHERE id=:id');
+        $stmt->execute(array(':id' => $id));
+        $stmt->setFetchMode(PDO::FETCH_CLASS, User::class);
+        $user = $stmt->fetch(PDO::FETCH_CLASS);
+        return $user;
     }
 
     protected static function db()

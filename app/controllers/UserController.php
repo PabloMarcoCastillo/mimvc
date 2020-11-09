@@ -27,7 +27,9 @@ class UserController
     public function show($arguments)
     {
         $id = $arguments[0];
-        echo "Mostrar el usuario $id";        
+        echo "Mostrar el usuario $id"; 
+        $user=User::find($id);
+        include('../views/user/show.php');       
     }
     
     public function delete($arguments)

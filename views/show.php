@@ -10,6 +10,8 @@
     <ul>
         <li>Usuario número: <?= $user[0] ?></li>
         <li>Nombre: <?= $user[1] ?></li>
+        <li>Apellido: <?= $user->surname ?></li>
+        <li>Email: <?= $user->email ?></li>
     </ul>
 </body>
 </html>
