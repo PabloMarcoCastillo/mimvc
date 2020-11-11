@@ -24,7 +24,12 @@
                 <td><?= $user->surname ?></td>
                 <td><?= $user->email ?></td>
                 <td><?= $user->birthdate ?></td>
+<<<<<<< HEAD
                 <td><a href="/user/show/<?=$user->id ?>"ver</a></td>
+=======
+                <td><a href="/user/show/<?= $user->id ?>">  Ver </a></td>
+                
+>>>>>>> 8d053b5ddb0a91a0dc5a9d0d58edfc17d9f6a208
                 </tr>
             <?php } ?>            
         </tbody>

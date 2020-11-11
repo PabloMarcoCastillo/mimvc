@@ -21,7 +21,7 @@ class User
         return $user;
     }
 
-    protected static function db()
+        protected static function db()
     {
         $dsn = 'mysql:dbname=mvc;host=db';
         $usuario = 'root';
